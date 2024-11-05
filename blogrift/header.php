@@ -81,10 +81,7 @@
                   </div>
               </div>
               <div class="right-nav"> 
-                <?php $blogus_menu_search  = get_theme_mod('blogus_menu_search','true'); 
-                  if($blogus_menu_search == true) { ?>
-                    <a class="msearch ml-auto" href=".bs_model" data-bs-toggle="modal"> <i class="fa fa-search"></i> </a>
-                <?php } ?>
+                <?php blogus_menu_search() ?>
               </div>
             </div>
             <!-- /Right nav -->
@@ -92,12 +89,12 @@
             <!-- Navigation -->
               <div class="collapse navbar-collapse" id="navbar-wp">
                 <?php wp_nav_menu( array(
-                      'theme_location' => 'primary',
-                      'container'  => 'nav-collapse collapse',
-                      'menu_class' => 'mx-auto nav navbar-nav'.(is_rtl() ? ' sm-rtl' : ''),
-                      'fallback_cb' => 'blogus_fallback_page_menu',
-                      'walker' => new blogus_nav_walker()
-                    ) ); ?>
+                    'theme_location' => 'primary',
+                    'container'  => 'nav-collapse collapse',
+                    'menu_class' => 'mx-auto nav navbar-nav'.(is_rtl() ? ' sm-rtl' : ''),
+                    'fallback_cb' => 'blogus_fallback_page_menu',
+                    'walker' => new blogus_nav_walker()
+                  ) ); ?>
               </div>
             <!-- Right nav -->
              
