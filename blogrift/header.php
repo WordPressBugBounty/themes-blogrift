@@ -20,7 +20,13 @@
 <div id="page" class="site">
 <a class="skip-link screen-reader-text" href="#content">
 <?php _e( 'Skip to content', 'blogrift' ); ?></a>
+<?php $background_image = get_theme_support( 'custom-header', 'default-image' );
+    if ( has_header_image() ) { $background_image = get_header_image(); } ?>
     <div class="wrapper" id="custom-background-css">
+      <!--wrapper-->
+      <?php if ( has_header_image() ) { ?>
+        <img src="<?php echo esc_url( $background_image ); ?>">
+      <?php } ?>
       <!--header--> 
       <header class="bs-headfive"> 
       <!-- Main Menu Area-->
