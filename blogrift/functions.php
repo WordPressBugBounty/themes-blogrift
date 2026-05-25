@@ -83,7 +83,7 @@ function blogrift_theme_option( $wp_customize ) {
     /*--- Site title Font size **/
     $wp_customize->add_setting('blogrift_title_font_size',
         array(
-            'default'           => 30,
+            'default'           => 60,
             'capability'        => 'edit_theme_options',
             'sanitize_callback' => 'sanitize_text_field',
             'priority' => 50,
@@ -102,7 +102,7 @@ add_action('customize_register','blogrift_theme_option');
 if ( ! function_exists( 'blogrift_header_color' ) ) :
 function blogrift_header_color() {
     $blogus_logo_text_color = get_header_textcolor();
-    $blogrift_title_font_size = get_theme_mod('blogrift_title_font_size',30); ?>
+    $blogrift_title_font_size = get_theme_mod('blogrift_title_font_size',60); ?>
 
     <style type="text/css">
     <?php if ( ! display_header_text() ) : ?>

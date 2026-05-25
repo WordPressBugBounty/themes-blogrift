@@ -4,8 +4,8 @@ Theme URI: https://themeansar.com/free-themes/blogrift/
 Author: Themeansar
 Author URI: https://themeansar.com
 Description: Blogrift is a fast, clean, modern-looking Best Responsive News Magazine WordPress theme. The theme is fully widgetized, so users can manage the content by using easy to use widgets. Blogrift is suitable for dynamic news, newspapers, magazine, publishers, blogs, editors, online and gaming magazines, newsportals,personal blogs, newspaper, publishing or review siteand any creative website. Blogrift is SEO friendly, WPML,Gutenberg, translation and RTL ready. Live preview : https://demos.themeansar.com/blogus/blogrift/ and documentation at https://docs.themeansar.com/docs/blogus/
-Version: 0.9
-Requires at least: 6.6
+Version: 1.0
+Requires at least: 6.7
 Requires PHP: 7.4
 Tested up to: 6.8
 License: GNU General Public License v3 or later
@@ -73,7 +73,10 @@ a:focus {
     font-weight: 400;
 }
 .list-blog .bs-blog-thumb{
-    margin-right: 2.5rem;
+    /* margin-right: 2.5rem; */
+}
+.list-blog.bs-blog-post{
+    gap: 40px;
 }
 .bs-blog-post.single{
     margin-bottom: 30px;
@@ -87,7 +90,7 @@ a:focus {
     min-width: 50.333333%;
     height: 400px;
     min-height: 250px;
-    margin-right: 25px;
+    /* margin-right: 25px; */
     background-color: #333;
 }
 .mainfeatured .bs-blog-post .title{
@@ -104,6 +107,14 @@ a:focus {
 }
 .navbar-brand{
     margin-right: 0;
+}
+.switch .slider::before, .right-nav a, .bs-social li a i {
+    width: 25px;
+    height: 25px;
+}
+.switch {
+    width: 25px;
+    height: 16px;
 }
 @media (max-width: 767.98px) {
     .mainfeatured .bs-blog-category{
